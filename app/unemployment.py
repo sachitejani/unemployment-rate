@@ -30,4 +30,15 @@ print("-------------------------")
 print("LATEST UNEMPLOYMENT RATE:")
 print(f"{latest_value}%", "as of", latest_date)
 
+# Part B
+ 
+this_year = [d for d in parsed_response["data"] if "2022-" in d["date"]]
+ 
+rates_this_year = [float(d["value"]) for d in this_year]
+#print(rates_this_year)
+ 
+print("-------------------------")
+print("AVG UNEMPLOYMENT THIS YEAR:", f"{mean(rates_this_year)}%")
+print("NO MONTHS:", len(this_year))
+
 
