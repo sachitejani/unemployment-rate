@@ -20,4 +20,8 @@ pprint(parsed_response)
 #breakpoint()
 
 latest = parsed_response["data"][0]
-print(latest)
+latest_date = latest["date"]
+
+print("-------------------------")
+print("LATEST UNEMPLOYMENT RATE:")
+print(f"{latest}%", "as of", latest_date)
