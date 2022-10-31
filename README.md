@@ -43,11 +43,13 @@ python app/my_script.py
 Run the unemployment report
 
 ```sh
-python app/unemployment.py
+# python app/unemployment.py
+python -m app.unemployment
 ```
 
 Run stocks report:
 
 ```sh
-python app/stocks.py
+# python app/stocks.py - this is not modular
+python -m app.stocks
 ```

@@ -1,15 +1,11 @@
 
 # this is the "app/unemployment_report.py" file...
 
-import os
 import json
-from dotenv import load_dotenv
 from pprint import pprint
 import requests
 from statistics import mean
-
-load_dotenv()
-API_KEY = os.getenv("API_KEY")
+from app.alphavantage import API_KEY
 
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
