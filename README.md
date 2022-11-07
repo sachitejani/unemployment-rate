@@ -53,3 +53,11 @@ Run stocks report:
 # python app/stocks.py - this is not modular
 python -m app.stocks
 ```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
