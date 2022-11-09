@@ -3,14 +3,14 @@
 
 from pandas import read_csv
 
-from app.alphavantage import API_KEY
+from app.alphavantage import ALPHAVANTAGE_API_KEY
 
 def format_usd(my_price):
     return f"${my_price:,.2f}"
 
 def fetch_stocks_data(symbol):
     
-    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
+    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}&datatype=csv"
     df = read_csv(request_url)
     return df
 

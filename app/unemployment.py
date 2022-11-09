@@ -5,7 +5,7 @@ from statistics import mean
 import requests
 from plotly.express import line
 
-from app.alphavantage import API_KEY
+from app.alphavantage import ALPHAVANTAGE_API_KEY
 
 
 def format_pct(my_number):
@@ -20,7 +20,7 @@ def format_pct(my_number):
 
 def fetch_unemployment_data():
     """Fetches unemployment data from the AlphaVantage API. Returns a list of dictionaries."""
-    request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
+    request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
 
     response = requests.get(request_url)
 
