@@ -4,10 +4,8 @@ from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
 
-# both decorators are ok if you want two ways to reference the same page
 @home_routes.route("/")
 @home_routes.route("/home")
-# each function name should have its own name...
 def index():
     print("HOME...")
     # return "Welcome Home"
