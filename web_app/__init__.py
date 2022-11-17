@@ -1,5 +1,4 @@
 # this is the "web_app/__init__.py" file...
-# treating this as 'boil plate'
 
 from flask import Flask
 
@@ -14,7 +13,6 @@ def create_app():
     #app.register_blueprint(weather_routes)
     return app
 
-# create a new instance of our web application
 if __name__ == "__main__":
     my_app = create_app()
     my_app.run(debug=True)
